@@ -1,7 +1,7 @@
 body {
   margin: 0px;
 }
-
+/*Navbar*/
 .navbar img {
   margin: 8px 16px;
   position: absolute;
@@ -26,7 +26,8 @@ body {
   background-color: #ddd;
   color: black;
 }
-
+/**/
+/*Intro section*/
 .intro {
   display: flex;
   justify-content: space-between;
@@ -182,7 +183,7 @@ body {
 .add:active {
   color: green;
 }
-
+/**/
 /*best book selling*/
 
 .section {
@@ -254,6 +255,8 @@ body {
 .search-bar {
   display: flex;
   align-items: center;
+  margin: auto;
+  width: 50%;
   margin-bottom: 1rem;
   border: 1px solid #cccccc;
   border-radius: 0.5rem;
@@ -435,6 +438,10 @@ button:hover {
 }
 
 .prey {
+  width: 40%;
+  margin: auto;
   font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: larger;
+  word-spacing: 2px;
+  line-height: 50px;
 }
-
