@@ -11,6 +11,7 @@
     <title>Your Website</title>
   </head>
   <body>
+    <!--navbar-->
     <div class="navbar">
       <img src="logo.png" alt="Logo" width="60px" height="55px" />
       <a href="#logo">Logo</a>
@@ -24,7 +25,9 @@
       <a href="#Review" onclick="scrolltoReviews()">Review</a>
       <a href="#Contacts" onclick="scrolltoContacts()">Contacts</a>
     </div>
-    <hr color="white" />
+    <!---->
+    <hr color="white" /> 
+    <!--Intro section-->
     <section id="Home">
       <div class="intro">
         <div class="selling-section">
@@ -47,6 +50,7 @@
         </div>
       </div>
     </section>
+<!---->
     <!--best book selling-->
     <section id="Best">
       <div class="section">
@@ -61,7 +65,7 @@
         <div class="book-cards">
           <div
             class="book-card"
-            onclick="openModal('Book Title 1', 'A gripping tale of suspense and adventure.', 'Images/Book 15.jpeg')"
+            onclick="openModal('Book Title 1', 'The Bhagavad Gita is a Hindu scripture on duty, righteousness.', 'Images/Book 15.jpeg')"
           >
             <img src="Images/Book 15.jpeg" alt="Book 1" />
             <div class="card-info">
@@ -70,12 +74,55 @@
               <button class="discount">Know More</button>
             </div>
           </div>
-
-          <!-- Add more book cards as needed -->
+          <div
+          class="book-card"
+          onclick="openModal('Book Title 2', 'The teachings of Ramana Maharshi emphasize self-inquiry and self-realization.', 'Images/Book 16.jpeg')"
+        >
+          <img src="Images/Book 16.jpeg" alt="Book 2" />
+          <div class="card-info">
+            <button class="discount">$19.99</button>
+            <button class="discount">Add to cart</button>
+            <button class="discount">Know More</button>
+          </div>
+        </div>
+        <div
+        class="book-card"
+        onclick="openModal('Book Title 3', 'Teachings cover spirituality, well-being, and personal transformation.', 'Images/Book 17.jpeg')"
+      >
+        <img src="Images/Book 17.jpeg" alt="Book 3" />
+        <div class="card-info">
+          <button class="discount">$19.99</button>
+          <button class="discount">Add to cart</button>
+          <button class="discount">Know More</button>
+        </div>
+      </div>
+      <div
+      class="book-card"
+      onclick="openModal('Book Title 4', 'A personal finance classic, contrasting financial mindsets for wealth-building', 'Images/Book 18.jpeg')"
+    >
+      <img src="Images/Book 18.jpeg" alt="Book 4" />
+      <div class="card-info">
+        <button class="discount">$19.99</button>
+        <button class="discount">Add to cart</button>
+        <button class="discount">Know More</button>
+      </div>
+    </div>
+    <div
+    class="book-card"
+    onclick="openModal('Book Title 5', 'A romantic thriller involving a love story, suspense, and unexpected twists', 'Images/Book 19.jpeg')"
+  >
+    <img src="Images/Book 19.jpeg" alt="Book 5" />
+    <div class="card-info">
+      <button class="discount">$19.99</button>
+      <button class="discount">Add to cart</button>
+      <button class="discount">Know More</button>
+    </div>
+  </div>
+  
         </div>
       </div>
     </section>
-
+<!---->
     <!--recommadation-->
     <section id="Recommendations">
       <div class="section">
@@ -92,21 +139,190 @@
             <button><i class="fas fa-search"></i></button>
           </div>
         </div>
-
+        <hr color="white" />
+        <div class="down">
         <div class="book-cards">
           <div
             class="book-card"
-            onclick="openModal('Book Title 1', 'An intriguing journey through fantasy realms.', 'book1.jpg')"
+            onclick="openModal('Book Title 1', 'An intriguing journey through fantasy realms.', 'Images/Book 1.jpg')"
           >
-            <img src="book1.jpg" alt="Book 1" />
+            <img src="Images/Book 1.jpg" alt="Book 1" />
             <div class="card-info">
               <button class="discount">$19.99</button>
               <button class="discount">Add to cart</button>
               <button class="discount">Know More</button>
             </div>
           </div>
+          <div
+            class="book-card"
+            onclick="openModal('Book Title 2', 'An intriguing journey through fantasy realms.', 'Images/Book 2.jpg')"
+          >
+            <img src="Images/Book 2.jpg" alt="Book 1" />
+            <div class="card-info">
+              <button class="discount">$19.99</button>
+              <button class="discount">Add to cart</button>
+              <button class="discount">Know More</button>
+            </div>
+          </div>
+          <div
+            class="book-card"
+            onclick="openModal('Book Title 1', 'An intriguing journey through fantasy realms.', 'Images/Book 3.png')"
+          >
+            <img src="Images/Book 3.png" alt="Book 1" />
+            <div class="card-info">
+              <button class="discount">$19.99</button>
+              <button class="discount">Add to cart</button>
+              <button class="discount">Know More</button>
+            </div>
+          </div>
+          <div
+            class="book-card"
+            onclick="openModal('Book Title 1', 'An intriguing journey through fantasy realms.', 'Images/Book 4.png')"
+          >
+            <img src="Images/Book 4.png" alt="Book 1" />
+            <div class="card-info">
+              <button class="discount">$19.99</button>
+              <button class="discount">Add to cart</button>
+              <button class="discount">Know More</button>
+            </div>
+          </div>
+          <div
+            class="book-card"
+            onclick="openModal('Book Title 1', 'An intriguing journey through fantasy realms.', 'Images/Book 5.png')"
+          >
+            <img src="Images/Book 5.png" alt="Book 1" />
+            <div class="card-info">
+              <button class="discount">$19.99</button>
+              <button class="discount">Add to cart</button>
+              <button class="discount">Know More</button>
+            </div>
+          </div>
+        </div>
 
-          <!-- Add more book cards as needed -->
+        <hr color="white">
+        <hr color="white">
+
+        <div class="down">
+          <div class="book-cards">
+            <div
+              class="book-card"
+              onclick="openModal('Book Title 1', 'An intriguing journey through fantasy realms.', 'Images/Book 6.jpg')"
+            >
+              <img src="Images/Book 6.png" alt="Book 1" />
+              <div class="card-info">
+                <button class="discount">$19.99</button>
+                <button class="discount">Add to cart</button>
+                <button class="discount">Know More</button>
+              </div>
+            </div>
+            <div
+              class="book-card"
+              onclick="openModal('Book Title 2', 'An intriguing journey through fantasy realms.', 'Images/Book 7.jpg')"
+            >
+              <img src="Images/Book 7.png" alt="Book 1" />
+              <div class="card-info">
+                <button class="discount">$19.99</button>
+                <button class="discount">Add to cart</button>
+                <button class="discount">Know More</button>
+              </div>
+            </div>
+            <div
+              class="book-card"
+              onclick="openModal('Book Title 1', 'An intriguing journey through fantasy realms.', 'Images/Book 8.png')"
+            >
+              <img src="Images/Book 8.jpg" alt="Book 1" />
+              <div class="card-info">
+                <button class="discount">$19.99</button>
+                <button class="discount">Add to cart</button>
+                <button class="discount">Know More</button>
+              </div>
+            </div>
+            <div
+              class="book-card"
+              onclick="openModal('Book Title 9', 'An intriguing journey through fantasy realms.', 'Images/Book 9.png')"
+            >
+              <img src="Images/Book 9.png" alt="Book 1" />
+              <div class="card-info">
+                <button class="discount">$19.99</button>
+                <button class="discount">Add to cart</button>
+                <button class="discount">Know More</button>
+              </div>
+            </div>
+            <div
+              class="book-card"
+              onclick="openModal('Book Title 10', 'An intriguing journey through fantasy realms.', 'Images/Book 10.png')"
+            >
+              <img src="Images/Book 10.png" alt="Book 1" />
+              <div class="card-info">
+                <button class="discount">$19.99</button>
+                <button class="discount">Add to cart</button>
+                <button class="discount">Know More</button>
+              </div>
+            </div>
+        </div>
+
+        <hr color="white">
+        <hr color="white">
+        
+        <div class="down">
+          <div class="book-cards">
+            <div
+              class="book-card"
+              onclick="openModal('Book Title 19', 'An intriguing journey through fantasy realms.', 'Images/Book 19.jpeg')"
+            >
+              <img src="Images/Book 19.jpeg" alt="Book 1" />
+              <div class="card-info">
+                <button class="discount">$19.99</button>
+                <button class="discount">Add to cart</button>
+                <button class="discount">Know More</button>
+              </div>
+            </div>
+            <div
+              class="book-card"
+              onclick="openModal('Book Title 11', 'An intriguing journey through fantasy realms.', 'Images/Book 11.png')"
+            >
+              <img src="Images/Book 11.png" alt="Book 1" />
+              <div class="card-info">
+                <button class="discount">$19.99</button>
+                <button class="discount">Add to cart</button>
+                <button class="discount">Know More</button>
+              </div>
+            </div>
+            <div
+              class="book-card"
+              onclick="openModal('Book Title 12', 'An intriguing journey through fantasy realms.', 'Images/Book 12.png')"
+            >
+              <img src="Images/Book 12.png" alt="Book 1" />
+              <div class="card-info">
+                <button class="discount">$19.99</button>
+                <button class="discount">Add to cart</button>
+                <button class="discount">Know More</button>
+              </div>
+            </div>
+            <div
+              class="book-card"
+              onclick="openModal('Book Title 13', 'An intriguing journey through fantasy realms.', 'Images/Book 13.png')"
+            >
+              <img src="Images/Book 13.png" alt="Book 1" />
+              <div class="card-info">
+                <button class="discount">$19.99</button>
+                <button class="discount">Add to cart</button>
+                <button class="discount">Know More</button>
+              </div>
+            </div>
+            <div
+              class="book-card"
+              onclick="openModal('Book Title 14', 'An intriguing journey through fantasy realms.', 'Images/Book 14.png')"
+            >
+              <img src="Images/Book 14.png" alt="Book 1" />
+              <div class="card-info">
+                <button class="discount">$19.99</button>
+                <button class="discount">Add to cart</button>
+                <button class="discount">Know More</button>
+              </div>
+            </div>
+        </div>
+          
         </div>
       </div>
     </section>
@@ -224,6 +440,7 @@
         <button onclick="scrollToTop()">Back to Top</button>
       </footer>
     </section>
+    <!---->
     <script>
       function scrollToTop() {
         window.scrollTo({
@@ -286,4 +503,3 @@
     </script>
   </body>
 </html>
-
