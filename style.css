@@ -1,1 +1,440 @@
+body {
+  margin: 0px;
+}
+
+.navbar img {
+  margin: 8px 16px;
+  position: absolute;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  overflow: hidden;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  text-decoration: none;
+}
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 101vh; /* Set the container to full viewport height */
+  padding: 20px;
+}
+
+.selling-section {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  justify-content: space-between; /* Adjust the justification based on your layout requirements */
+  margin: 50px;
+  margin-left: 100px;
+  background-color: #fafafa; /* Adjust the background color */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(93, 93, 93, 0.1); /* Add a subtle box shadow */
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-section img {
+  max-width: 80%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(125, 110, 110, 0.1); /* Optional: Add a subtle box shadow */
+}
+
+.title {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 60px;
+  text-shadow: 2px 2px 4px #a5a07c;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-family: "Times New Roman", serif;
+  margin-bottom: 20px;
+}
+
+.redirect-button {
+  background-color: #2196f3;
+  color: #fff;
+  padding: 11px 25px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.redirect-button:hover {
+  background-color: #0e6cf1;
+}
+
+.bestsellers-body {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.bestseller-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.photo {
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.bestsellers-body img {
+  width: 100%;
+}
+
+.book {
+  margin: 0 17%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition-duration: 0.25s;
+  font-size: 20px;
+  font-weight: bolder;
+  position: relative;
+}
+
+.know-more {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  width: 100%;
+  height: 71%;
+  padding: 0 20px;
+  opacity: 0;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.book img {
+  width: 100%;
+  height: 70%;
+  border-radius: 10px;
+}
+
+.book button {
+  width: 100%;
+  height: 10%;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Dancing Script", cursive;
+  color: white;
+  background-color: rgb(30, 30, 30);
+  border-radius: 6px;
+  border: solid 1px black;
+  transition: 0.3s;
+}
+
+.know-more button {
+  width: 80%;
+  height: 50px;
+  padding: 5px 0;
+}
+
+.book button:hover {
+  transition: 0.25s;
+  transform: scale(1.01);
+  box-shadow: black 0px 0px 5px;
+}
+
+.know-more:hover {
+  opacity: 1;
+  transition: 0.3s;
+  transform: scale(1.01);
+}
+
+.know-more button:hover {
+  box-shadow: white 0px 0px 5px;
+}
+
+.add:active {
+  color: green;
+}
+
+/*best book selling*/
+
+.section {
+  padding: 20px;
+  text-align: center;
+}
+
+.section-header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+.section-header p {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: normal;
+  color: #000000;
+  margin-bottom: auto;
+}
+
+.book-cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.book-card {
+  position: relative;
+  width: 225px;
+  height: 420px;
+  background-color: #cfcccc;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+.book-card img {
+  margin-top: 10px;
+  width: 90%;
+  height: 70%;
+  border-radius: 10px;
+}
+
+.discount {
+  position: relative;
+  padding: 5px 20px;
+  border: 2px solid #abada4;
+  border-radius: 7px;
+  font-size: 14px;
+  font-family: "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #000000;
+  overflow: hidden;
+  margin-top: 5px;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+/**/
+/*recommadation*/
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 4px #000000;
+}
+
+.search-bar:hover {
+  box-shadow: 4px 4px 8px #000000;
+}
+
+.search-icon {
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  color: #cccccc;
+}
+.search-input {
+  flex: 1;
+  height: 2rem;
+  border: none;
+  font-size: 1rem;
+}
+
+input {
+  padding: 8px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+button {
+  padding: 8px;
+  background-color: hsl(203, 20%, 31%);
+  color: #fff;
+  border: 1px solid #2183c5;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #000000;
+}
+
+/**/
+/*reviews*/
+
+.card {
+  width: 300px;
+  height: 200px;
+  margin: 1rem;
+  border: 1px solid #d8d5d5;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 4px #000000;
+  background-color: #d7d7da;
+}
+.card-image {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  object-position: top;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.card-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem;
+}
+.card-review {
+  font-size: 1rem;
+  margin: 1rem;
+}
+
+.review-form {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+}
+
+h2 {
+  color: #3498db;
+  font-size: 40px;
+  text-shadow: 2px 2px 4px #8386b4;
+}
+.pp {
+  text-align: center;
+  font-size: 25px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2185d0;
+}
+
+.rew {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;
+}
+/**/
+/*footer*/
+footer {
+  background-color: #2e2e2e;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.social-media {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.social-media a img {
+  width: 35px;
+}
+
+.demo-links a {
+  color: #0000ff;
+  margin: 0 10px;
+  font-size: larger;
+  text-decoration: none;
+}
+
+button {
+  background-color: #3388ce;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: larger;
+  font-family: "Times New Roman", Times, serif;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0e6cf1;
+}
+
+.prey {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
 
