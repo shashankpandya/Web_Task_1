@@ -1,1 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" id="theme" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Your Website</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <img src="logo.png" alt="Logo" width="60px" height="55px" />
+      <a href="#logo">Logo</a>
+      <a href="#home" onclick="scrolltoHome()">Home</a>
+      <a href="#Best Selling Books" onclick="scrolltoBest()"
+        >Best Selling Books</a
+      >
+      <a href="#Recommendations Section" onclick="scrolltoRecommendations()"
+        >Recommendations</a
+      >
+      <a href="#Review" onclick="scrolltoReviews()">Review</a>
+      <a href="#Contacts" onclick="scrolltoContacts()">Contacts</a>
+    </div>
+    <hr color="white" />
+    <section id="Home">
+      <div class="intro">
+        <div class="selling-section">
+          <h1 class="title">Welcome to our Bookstore</h1>
+          <p class="subtitle">
+            Dive into a world of boundless imagination and endless
+            possibilities. Our books aren't just stories, they are adventures
+            waiting to be explored, knowledge ready to be embraced. Uncover the
+            extraordinary in the ordinary, page by page, with our curated
+            selection that transcends the boundaries of the written word.
+          </p>
+          <hr color="#fafafa" />
+          <button onclick="scrolltoBest()">Best Selling Book</button>
+        </div>
+        <div class="image-section">
+          <img
+            src="Images/wepik-export-202312150654007Oux.jpeg"
+            alt="Book Image"
+          />
+        </div>
+      </div>
+    </section>
+    <!--best book selling-->
+    <section id="Best">
+      <div class="section">
+        <div class="section-header">
+          <h1 class="title">Best Selling Books</h1>
+          <hr color="white" />
+          <p class="subtitle">
+            Explore our curated collection of top-rated books.
+          </p>
+        </div>
+        <hr color="white" />
+        <div class="book-cards">
+          <div
+            class="book-card"
+            onclick="openModal('Book Title 1', 'A gripping tale of suspense and adventure.', 'Images/Book 15.jpeg')"
+          >
+            <img src="Images/Book 15.jpeg" alt="Book 1" />
+            <div class="card-info">
+              <button class="discount">$19.99</button>
+              <button class="discount">Add to cart</button>
+              <button class="discount">Know More</button>
+            </div>
+          </div>
+
+          <!-- Add more book cards as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!--recommadation-->
+    <section id="Recommendations">
+      <div class="section">
+        <div class="section-header">
+          <h1 class="title">Recommended For You</h1>
+          <hr color="white" />
+          <p class="subtitle">
+            Discover our recommended reads with personalized suggestions.
+          </p>
+          <hr color="white" />
+          <div class="search-bar">
+            <i class="fa fa-search search-icon"></i>
+            <input class="search-input" type="text" placeholder="Search..." />
+            <button><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+
+        <div class="book-cards">
+          <div
+            class="book-card"
+            onclick="openModal('Book Title 1', 'An intriguing journey through fantasy realms.', 'book1.jpg')"
+          >
+            <img src="book1.jpg" alt="Book 1" />
+            <div class="card-info">
+              <button class="discount">$19.99</button>
+              <button class="discount">Add to cart</button>
+              <button class="discount">Know More</button>
+            </div>
+          </div>
+
+          <!-- Add more book cards as needed -->
+        </div>
+      </div>
+    </section>
+    <!---->
+
+    <!--reviews -->
+    <section id="Review">
+      <h1 class="title">Review</h1>
+      <p class="pp">
+        ✍️ Shape our narrative. Share your thoughts. Leave a review and be the
+        storyteller our community awaits.
+      </p>
+      <div class="intro">
+        <div class="rew">
+          <div class="card">
+            <img
+              class="card-image"
+              src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
+              alt="Person"
+            />
+            <div class="card-name">Marcus Sinclair</div>
+            <div class="card-review">
+              An absolute page-turner! Couldn't put it down.A must-read!
+            </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-image"
+              src="https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg"
+              alt="Person"
+            />
+            <div class="card-name">Elena Mercer</div>
+            <div class="card-review">
+              Beautifully written with a surprising twist.Highly recommend.
+            </div>
+          </div>
+        </div>
+        <div class="rew">
+          <div class="card">
+            <img
+              class="card-image"
+              src="https://img.freepik.com/free-photo/handsome-young-man-standing-grey-wall-chatting_171337-14952.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699833600&semt=ais"
+              alt="Person"
+            />
+            <div class="card-name">Quentin Ramirez</div>
+            <div class="card-review">
+              Heartwarming and thought-provoking.A touching story of resilience
+              and hope.
+            </div>
+          </div>
+          <div class="card">
+            <img
+              class="card-image"
+              src="https://media.istockphoto.com/id/920519462/photo/portrait-of-a-beautiful-girl-in-the-studio-on-a-blue-background.jpg?s=1024x1024&w=is&k=20&c=7Crw-C4HKY_lFqJ28xJbtDeI68NTRnqpm0pb4kagCwo="
+              alt="Person"
+            />
+            <div class="card-name">Nadia Harrington</div>
+            <div class="card-review">
+              Fast-paced and suspenseful.A thrilling ride from start to finish.
+            </div>
+          </div>
+        </div>
+        <div class="review-form">
+          <h2>Leave a Review</h2>
+          <form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="review">Your Review:</label>
+            <textarea id="review" name="review" rows="4" required></textarea>
+
+            <button type="submit">Submit Review</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!---->
+    <hr color="white" />
+    <!-- Footer -->
+    <section id="Contacts">
+      <footer>
+        <div class="social-media">
+          <a href="#" target="_blank"
+            ><img src="Images/facebook.1024x1024.png" alt="Facebook"
+          /></a>
+          <a href="#" target="_blank"
+            ><img src="Images/telegram.1024x1024.png" alt="Telegram"
+          /></a>
+          <a href="#" target="_blank"
+            ><img src="Images/instagram.1024x1024.png" alt="Instagram"
+          /></a>
+          <a href="#" target="_blank"
+            ><img src="Images/linkedin.1024x1024.png" alt="linkden"
+          /></a>
+          <a href="#" target="_blank"
+            ><img src="Images/twitter.1024x1024.png" alt="Twitter"
+          /></a>
+        </div>
+        <p class="prey">
+          Dive into the chapters of our universe. Follow our literary journey on
+          social, explore the secrets in our links, and soar back to the stars
+          with our 'Back-to-Top' rocket. Your story with us continues beyond the
+          pages.
+        </p>
+        <hr color="grey" />
+        <div class="demo-links">
+          <a href="#" target="_blank">Terms and Conditions</a>
+          <a href="#" target="_blank">Privacy Policy</a>
+          <a href="#" target="_blank">Copyright Information</a>
+        </div>
+        <hr color="grey" />
+        <button onclick="scrollToTop()">Back to Top</button>
+      </footer>
+    </section>
+    <script>
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    </script>
+
+    <script>
+      function scrolltoHome() {
+        var element = document.getElementById("Home");
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+          });
+        }
+      }
+    </script>
+    <script>
+      function scrolltoBest() {
+        var element = document.getElementById("Best");
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+          });
+        }
+      }
+    </script>
+
+    <script>
+      function scrolltoRecommendations() {
+        var element = document.getElementById("Recommendations");
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+          });
+        }
+      }
+    </script>
+    <script>
+      function scrolltoReviews() {
+        var element = document.getElementById("Reviews");
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+          });
+        }
+      }
+    </script>
+    <script>
+      function scrolltoContacts() {
+        var element = document.getElementById("Contacts");
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
 
