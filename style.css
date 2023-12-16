@@ -437,6 +437,22 @@ button:hover {
   background-color: #0e6cf1;
 }
 
+.About {
+  background-color: #2e2e2e;
+  height: 320px;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+}
+.About p {
+  font-size: 25px;
+}
+.About a {
+  font-size: 20px;
+  word-spacing: 2px;
+  line-height: 30px;
+}
+
 .prey {
   width: 40%;
   margin: auto;
