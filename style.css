@@ -204,8 +204,10 @@ body {
 }
 
 .book-cards {
-  display: flex;
-  justify-content: space-around;
+ display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .book-card {
