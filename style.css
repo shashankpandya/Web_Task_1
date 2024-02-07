@@ -211,7 +211,7 @@ body {
 }
 
 .book-card {
-  position: relative;
+  position: absolute;
   width: 225px;
   height: 420px;
   background-color: #cfcccc;
