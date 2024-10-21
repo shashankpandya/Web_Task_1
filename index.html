@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
     <title>KiK_Task_1</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <meta name="description" content="Explore our curated collection of best-selling books and personalized recommendations at our online bookstore.">
+    <meta name="keywords" content="books, bookstore, best sellers, reading, literature">
+    <meta name="author" content="Your Name">
   </head>
   <body>
     <!--navbar-->
@@ -24,7 +28,7 @@
       </div>
       <div class="icons">
         <i class="fas fa-search icon"></i>
-        <i class="fas fa-shopping-cart icon"></i>
+        <i class="fas fa-shopping-cart icon" onclick="openCartModal()" aria-label="Shopping Cart"><span id="cartCount" aria-label="Items in cart">0</span></i>
       </div>
     </nav>
     <!---->
@@ -35,17 +39,29 @@
         <div class="selling-section">
           <h1 class="title">Welcome to our Bookstore</h1>
           <p class="subtitle">
-            Dive into a world of boundless imagination and endless
-            possibilities. Our books aren't just stories, they are adventures
-            waiting to be explored, knowledge ready to be embraced. Uncover the
-            extraordinary in the ordinary, page by page, with our curated
-            selection that transcends the boundaries of the written word.
+            Dive into a world of boundless imagination and endless possibilities. Our books aren't just stories, they are adventures waiting to be explored, knowledge ready to be embraced.
           </p>
-          <hr color="#fafafa" />
-          <button onclick="scrolltoBest()">Best Selling Book</button>
+          <div class="cta-container">
+            <button class="cta-button primary" onclick="scrolltoBest()">Explore Best Sellers</button>
+            <button class="cta-button secondary" onclick="scrolltoRecommendations()">Get Recommendations</button>
+          </div>
+          <div class="features">
+            <div class="feature">
+              <i class="fas fa-shipping-fast"></i>
+              <span>Free Shipping</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-undo"></i>
+              <span>Easy Returns</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-lock"></i>
+              <span>Secure Payment</span>
+            </div>
+          </div>
         </div>
         <div class="image-section">
-          <img src="Images/wepik-export-202312150654007Oux.jpeg" alt="Book Image"/>
+          <img src="Images/wepik-export-202312150654007Oux.jpeg" alt="Book Image" class="main-image" loading="lazy"/>
         </div>
       </div>
     </section>
@@ -55,217 +71,126 @@
       <div class="section">
         <div class="section-header">
           <h1 class="title">Best Selling Books</h1>
-          <hr color="white" />
           <p class="subtitle">
-            Explore our curated collection of top-rated books.
+            Explore our curated collection of top-rated books that readers can't put down.
           </p>
         </div>
-        <hr color="white" />
-        <div class="book-cards">
-          <div
-            class="book-card"
-            onclick="openModal('Book Title 1', 'The Bhagavad Gita is a Hindu scripture on duty, righteousness.', 'Images/Book 15.jpeg')">
-            <img src="Images/Book 15.jpeg" alt="Book 1" />
-            <div class="card-info">
-              <button class="discount">$19.99</button>
-              <button class="discount">Add to cart</button>
-              <button class="discount">Know More</button>
+        <div class="book-carousel">
+          <button class="carousel-button prev" onclick="moveCarousel(-1, 'best')">&#10094;</button>
+          <div class="book-cards">
+            <div class="book-card" onclick="openModal('The Bhagavad Gita', 'A Hindu scripture on duty, righteousness, and spiritual wisdom.', 'Images/Book 15.jpeg', '$19.99')">
+              <img src="Images/Book 15.jpeg" alt="The Bhagavad Gita" />
+              <div class="card-info">
+                <h3>The Bhagavad Gita</h3>
+                <p class="author">Eknath Easwaran</p>
+                <div class="rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="reviews">(1,234 reviews)</span>
+                </div>
+                <p class="price">$19.99</p>
+                </div>
+                </div>
+            <div class="book-card" onclick="openModal('Be As You Are', 'The teachings of Ramana Maharshi on self-inquiry and self-realization.', 'Images/Book 16.jpeg', '$15.68')">
+              <img src="Images/Book 16.jpeg" alt="Be As You Are" />
+              <div class="card-info">
+                <h3>Be As You Are</h3>
+                <p class="author">Sri Ramana Maharshi</p>
+                <div class="rating">
+                  <span class="stars">★★★★☆</span>
+                  <span class="reviews">(987 reviews)</span>
+                </div>
+                <p class="price">$15.68</p>
+                </div>
             </div>
+            <div class="book-card" onclick="openModal('To Kill a Mockingbird', 'A classic novel about racial injustice in the American South.', 'Images/Book 2.jpg', '$14.99')">
+              <img src="Images/Book 2.jpg" alt="To Kill a Mockingbird" />
+              <div class="card-info">
+                <h3>To Kill a Mockingbird</h3>
+                <p class="author">Harper Lee</p>
+                <div class="rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="reviews">(2,345 reviews)</span>
+                </div>
+                <p class="price">$14.99</p>
+                </div>
+                </div>
+            <div class="book-card" onclick="openModal('1984', 'A dystopian novel about totalitarianism and mass surveillance.', 'Images/Book 3.jpg', '$12.99')">
+              <img src="Images/Book 3.png" alt="1984" />
+              <div class="card-info">
+                <h3>1984</h3>
+                <p class="author">George Orwell</p>
+                <div class="rating">
+                  <span class="stars">★★★★☆</span>
+                  <span class="reviews">(1,876 reviews)</span>
+                </div>
+                <p class="price">$12.99</p>
+                </div>
+            </div>
+            <div class="book-card" onclick="openModal('Pride and Prejudice', 'A romantic novel of manners by Jane Austen.', 'Images/Book 4.jpg', '$10.99')">
+              <img src="Images/Book 4.png" alt="Pride and Prejudice" />
+              <div class="card-info">
+                <h3>Pride and Prejudice</h3>
+                <p class="author">Jane Austen</p>
+                <div class="rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="reviews">(3,210 reviews)</span>
+                </div>
+                <p class="price">$10.99</p>
+                </div>
+            </div>
+            <div class="book-card" onclick="openModal('The Catcher in the Rye', 'A coming-of-age novel by J.D. Salinger.', 'Images/Book 5.jpg', '$13.99')">
+              <img src="Images/Book 5.png" alt="The Catcher in the Rye" />
+              <div class="card-info">
+                <h3>The Catcher in the Rye</h3>
+                <p class="author">J.D. Salinger</p>
+                <div class="rating">
+                  <span class="stars">★★★★☆</span>
+                  <span class="reviews">(1,543 reviews)</span>
+                </div>
+                <p class="price">$13.99</p>
+                </div>
+            </div>
+              </div>
+          <button class="carousel-button next" onclick="moveCarousel(1, 'best')">&#10095;</button>
           </div>
-          <div
-          class="book-card"
-          onclick="openModal('Book Title 2', 'The teachings of Ramana Maharshi emphasize self-inquiry and self-realization.', 'Images/Book 16.jpeg')">
-          <img src="Images/Book 16.jpeg" alt="Book 2" />
-          <div class="card-info">
-            <button class="discount">$15.68</button>
-            <button class="discount">Add to cart</button>
-            <button class="discount">Know More</button>
-          </div>
-        </div>
-        <div class="book-card" onclick="openModal('Book Title 3', 'Teachings cover spirituality, well-being, and personal transformation.', 'Images/Book 17.jpeg')">
-        <img src="Images/Book 17.jpeg" alt="Book 3" />
-        <div class="card-info">
-          <button class="discount">$25.00</button>
-          <button class="discount">Add to cart</button>
-          <button class="discount">Know More</button>
-        </div>
-      </div>
-      <div class="book-card" onclick="openModal('Book Title 4', 'A personal finance classic, contrasting financial mindsets for wealth-building', 'Images/Book 18.jpeg')">
-      <img src="Images/Book 18.jpeg" alt="Book 4" />
-      <div class="card-info">
-        <button class="discount">$24.55</button>
-        <button class="discount">Add to cart</button>
-        <button class="discount">Know More</button>
-      </div>
-    </div>
-    <div  class="book-card" onclick="openModal('Book Title 5', 'A romantic thriller involving a love story, suspense, and unexpected twists', 'Images/Book 19.jpeg')">
-    <img src="Images/Book 19.jpeg" alt="Book 5" />
-    <div class="card-info">
-      <button class="discount">$14.00</button>
-      <button class="discount">Add to cart</button>
-      <button class="discount">Know More</button>
-    </div>
-  </div>
-  
-        </div>
       </div>
     </section>
+
+    <!-- Book Modal -->
+    <div id="bookModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="Book Cover">
+        <div class="modal-info">
+          <h2 id="modalTitle"></h2>
+          <p id="modalDescription"></p>
+          <p id="modalPrice" class="price"></p>
+        </div>
+      </div>
+    </div>
 <!---->
     <!--recommadation-->
     <section id="Recommendations">
       <div class="section">
         <div class="section-header">
           <h1 class="title">Recommended For You</h1>
-          <hr color="white" />
           <p class="subtitle">
-            Discover our recommended reads with personalized suggestions.
+            Discover our recommended reads tailored just for you.
           </p>
-          <hr color="white" />
           <div class="search-bar">
-            <i class="fa fa-search search-icon"></i>
-            <input class="search-input" type="text" placeholder="Search..." />
-            <button><i class="fas fa-search"></i></button>
+            <input type="text" id="searchInput" placeholder="Search books..." onkeyup="searchBooks()">
+            <button onclick="searchBooks()"><i class="fas fa-search"></i></button>
           </div>
         </div>
-        <hr color="white" />
-        <div class="down">
-        <div class="book-cards">
-          <div class="book-card"  onclick="openModal('Book Title 1', 'An intriguing journey through fantasy realms.', 'Images/Book 1.jpg')">
-            <img src="Images/Book 1.jpg" alt="Book 1" />
-            <div class="card-info">
-              <button class="discount">$17.58</button>
-              <button class="discount">Add to cart</button>
-              <button class="discount">Know More</button>
-            </div>
+        <div class="recommendations-carousel">
+          <button class="carousel-button prev" onclick="moveCarousel(-1, 'recommendations')">&#10094;</button>
+          <div class="recommendations-cards">
+            <!-- Book cards will be added here -->
           </div>
-          <div class="book-card" onclick="openModal('Book Title 2', 'An intriguing journey through fantasy realms.', 'Images/Book 2.jpg')">
-            <img src="Images/Book 2.jpg" alt="Book 1" />
-            <div class="card-info">
-              <button class="discount">$19.78</button>
-              <button class="discount">Add to cart</button>
-              <button class="discount">Know More</button>
-            </div>
-          </div>
-          <div  class="book-card" onclick="openModal('Book Title 1', 'An intriguing journey through fantasy realms.', 'Images/Book 3.png')">
-            <img src="Images/Book 3.png" alt="Book 1" />
-            <div class="card-info">
-              <button class="discount">$20.78</button>
-              <button class="discount">Add to cart</button>
-              <button class="discount">Know More</button>
-            </div>
-          </div>
-          <div class="book-card" onclick="openModal('Book Title 1', 'An intriguing journey through fantasy realms.', 'Images/Book 4.png')">
-            <img src="Images/Book 4.png" alt="Book 1" />
-            <div class="card-info">
-              <button class="discount">$26.89</button>
-              <button class="discount">Add to cart</button>
-              <button class="discount">Know More</button>
-            </div>
-          </div>
-          <div class="book-card" onclick="openModal('Book Title 1', 'An intriguing journey through fantasy realms.', 'Images/Book 5.png')">
-            <img src="Images/Book 5.png" alt="Book 1" />
-            <div class="card-info">
-              <button class="discount">$30.00</button>
-              <button class="discount">Add to cart</button>
-              <button class="discount">Know More</button>
-            </div>
-          </div>
+          <button class="carousel-button next" onclick="moveCarousel(1, 'recommendations')">&#10095;</button>
         </div>
-
-        <hr color="white">
-        <hr color="white">
-
-        <div class="down">
-          <div class="book-cards">
-            <div class="book-card" onclick="openModal('Book Title 1', 'An intriguing journey through fantasy realms.', 'Images/Book 6.jpg')">
-              <img src="Images/Book 6.png" alt="Book 1" />
-              <div class="card-info">
-                <button class="discount">$28.79</button>
-                <button class="discount">Add to cart</button>
-                <button class="discount">Know More</button>
-              </div>
-            </div>
-            <div class="book-card" onclick="openModal('Book Title 2', 'An intriguing journey through fantasy realms.', 'Images/Book 7.jpg')">
-              <img src="Images/Book 7.png" alt="Book 1" />
-              <div class="card-info">
-                <button class="discount">$23.42</button>
-                <button class="discount">Add to cart</button>
-                <button class="discount">Know More</button>
-              </div>
-            </div>
-            <div class="book-card" onclick="openModal('Book Title 1', 'An intriguing journey through fantasy realms.', 'Images/Book 8.png')">
-              <img src="Images/Book 8.jpg" alt="Book 1" />
-              <div class="card-info">
-                <button class="discount">$14.00</button>
-                <button class="discount">Add to cart</button>
-                <button class="discount">Know More</button>
-              </div>
-            </div>
-            <div class="book-card" onclick="openModal('Book Title 9', 'An intriguing journey through fantasy realms.', 'Images/Book 9.png')">
-              <img src="Images/Book 9.png" alt="Book 1" />
-              <div class="card-info">
-                <button class="discount">$24.64</button>
-                <button class="discount">Add to cart</button>
-                <button class="discount">Know More</button>
-              </div>
-            </div>
-            <div class="book-card" onclick="openModal('Book Title 10', 'An intriguing journey through fantasy realms.', 'Images/Book 10.png')">
-              <img src="Images/Book 10.png" alt="Book 1" />
-              <div class="card-info">
-                <button class="discount">$19.55</button>
-                <button class="discount">Add to cart</button>
-                <button class="discount">Know More</button>
-              </div>
-            </div>
-        </div>
-
-        <hr color="white">
-        <hr color="white">
-        
-        <div class="down">
-          <div class="book-cards">
-            <div class="book-card" onclick="openModal('Book Title 19', 'An intriguing journey through fantasy realms.', 'Images/Book 19.jpeg')">
-              <img src="Images/Book 19.jpeg" alt="Book 1" />
-              <div class="card-info">
-                <button class="discount">$16.66</button>
-                <button class="discount">Add to cart</button>
-                <button class="discount">Know More</button>
-              </div>
-            </div>
-            <div class="book-card" onclick="openModal('Book Title 11', 'An intriguing journey through fantasy realms.', 'Images/Book 11.png')">
-              <img src="Images/Book 11.png" alt="Book 1" />
-              <div class="card-info">
-                <button class="discount">$17.89</button>
-                <button class="discount">Add to cart</button>
-                <button class="discount">Know More</button>
-              </div>
-            </div>
-            <div class="book-card" onclick="openModal('Book Title 12', 'An intriguing journey through fantasy realms.', 'Images/Book 12.png')">
-              <img src="Images/Book 12.png" alt="Book 1" />
-              <div class="card-info">
-                <button class="discount">$23.86</button>
-                <button class="discount">Add to cart</button>
-                <button class="discount">Know More</button>
-              </div>
-            </div>
-            <div class="book-card" onclick="openModal('Book Title 13', 'An intriguing journey through fantasy realms.', 'Images/Book 13.png')">
-              <img src="Images/Book 13.png" alt="Book 1" />
-              <div class="card-info">
-                <button class="discount">$11.55</button>
-                <button class="discount">Add to cart</button>
-                <button class="discount">Know More</button>
-              </div>
-            </div>
-            <div  class="book-card" onclick="openModal('Book Title 14', 'An intriguing journey through fantasy realms.', 'Images/Book 14.png')">
-              <img src="Images/Book 14.png" alt="Book 1" />
-              <div class="card-info">
-                <button class="discount">$30.89</button>
-                <button class="discount">Add to cart</button>
-                <button class="discount">Know More</button>
-              </div>
-            </div>
-        </div>
-          
+        <div class="load-more">
+          <button onclick="loadMoreBooks()">Load More</button>
         </div>
       </div>
     </section>
@@ -273,59 +198,76 @@
 
     <!--reviews -->
     <section id="Review">
-      <h1 class="title">Review</h1>
-      <p class="pp">
-        ✍️ Shape our narrative. Share your thoughts. Leave a review and be the
-        storyteller our community awaits.
-      </p>
-      <div class="intro">
-        <div class="rew">
-          <div class="card">
-            <img class="card-image" src="Images/Person 1.jpg" alt="Person"/>
-            <div class="card-name">Marcus Sinclair</div>
-            <div class="card-review">
-              An absolute page-turner! Couldn't put it down.A must-read!
+      <div class="section-container">
+        <h1 class="title">Customer Reviews</h1>
+        <p class="subtitle">
+          ✍️ Shape our narrative. Share your thoughts. Leave a review and be the
+          storyteller our community awaits.
+        </p>
+        <div class="review-container">
+          <div class="review-cards">
+            <div class="review-card">
+              <img class="reviewer-image" src="Images/Person 1.jpg" alt="Marcus Sinclair"/>
+              <div class="reviewer-name">Marcus Sinclair</div>
+              <div class="review-text">
+                An absolute page-turner! Couldn't put it down. A must-read!
+              </div>
+              <div class="review-rating">★★★★★</div>
+            </div>
+            <div class="review-card">
+              <img class="reviewer-image" src="Images/Person 2.jpg" alt="Elena Mercer"/>
+              <div class="reviewer-name">Elena Mercer</div>
+              <div class="review-text">
+                Beautifully written with a surprising twist. Highly recommend.
+              </div>
+              <div class="review-rating">★★★★☆</div>
+            </div>
+            <div class="review-card">
+              <img class="reviewer-image" src="Images/Person 3.webp" alt="Quentin Ramirez"/>
+              <div class="reviewer-name">Quentin Ramirez</div>
+              <div class="review-text">
+                Heartwarming and thought-provoking. A touching story of resilience and hope.
+              </div>
+              <div class="review-rating">★★★★★</div>
+            </div>
+            <div class="review-card">
+              <img class="reviewer-image" src="Images/Person 4.jpg" alt="Nadia Harrington"/>
+              <div class="reviewer-name">Nadia Harrington</div>
+              <div class="review-text">
+                Fast-paced and suspenseful. A thrilling ride from start to finish.
+              </div>
+              <div class="review-rating">★★★★☆</div>
             </div>
           </div>
-          <div class="card">
-            <img class="card-image"  src="Images/Person 2.jpg" alt="Person"/>
-            <div class="card-name">Elena Mercer</div>
-            <div class="card-review">
-              Beautifully written with a surprising twist.Highly recommend.
-            </div>
+          <div class="review-form">
+            <h2>Leave a Review</h2>
+            <form id="reviewForm">
+              <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="rating">Rating:</label>
+                <select id="rating" name="rating" required>
+                  <option value="">Select a rating</option>
+                  <option value="5">★★★★★</option>
+                  <option value="4">★★★★☆</option>
+                  <option value="3">★★★☆☆</option>
+                  <option value="2">★★☆☆☆</option>
+                  <option value="1">★☆☆☆☆</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="review">Your Review:</label>
+                <textarea id="review" name="review" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="submit-review">Submit Review</button>
+            </form>
           </div>
-        </div>
-        <div class="rew">
-          <div class="card">
-            <img  class="card-image" src="Images/Person 3.webp" alt="Person"/>
-            <div class="card-name">Quentin Ramirez</div>
-            <div class="card-review">
-              Heartwarming and thought-provoking.A touching story of resilience
-              and hope.
-            </div>
-          </div>
-          <div class="card">
-            <img class="card-image"  src="Images/Person 4.jpg"  alt="Person"/>
-            <div class="card-name">Nadia Harrington</div>
-            <div class="card-review">
-              Fast-paced and suspenseful.A thrilling ride from start to finish.
-            </div>
-          </div>
-        </div>
-        <div class="review-form">
-          <h2>Leave a Review</h2>
-          <form>
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required />
-
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required />
-
-            <label for="review">Your Review:</label>
-            <textarea id="review" name="review" rows="4" required></textarea>
-
-            <button type="submit">Submit Review</button>
-          </form>
         </div>
       </div>
     </section>
